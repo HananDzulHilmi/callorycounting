@@ -5,30 +5,31 @@ import random
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
 # Data makanan sehat
-karbo label = tk.Label(🍚)= [
-    "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
-    "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
+karbo = [
+    "🍚 Nasi Putih", "🍚 Nasi Merah", "🌽 Nasi Jagung", "🥔 Kentang Rebus", "🌿 Singkong Kukus", 
+    "🥣 Oatmeal", "🍞 Roti Gandum", "🍙 Lontong", "🍜 Mie Jagung", "🍠 Ubi Rebus"
 ]
 
-lauk label = tk.Label(🍗)= [
-    "Telur Dadar", "Tempe Goreng", "Tahu Bacem", "Ayam Rebus", "Ikan Bakar", 
-    "Daging Sapi Panggang", "Udang Saus Tiram", "Tuna Kukus", "Ayam Kukus", "Telur Rebus"
+lauk = [
+    "🍳 Telur Dadar", "🍽️ Tempe Goreng", "🍢 Tahu Bacem", "🍗 Ayam Rebus", "🐟 Ikan Bakar", 
+    "🥩 Daging Sapi Panggang", "🦐 Udang Saus Tiram", "🐟 Tuna Kukus", "🍗 Ayam Kukus", "🥚 Telur Rebus"
 ]
 
-sayur label = tk.Label(🥬)= [
-    "Sayur Bayam", "Tumis Kangkung", "Capcay", "Sayur Asem", "Sup Wortel", 
-    "Gado-Gado", "Lalapan", "Sayur Lodeh", "Tumis Brokoli", "Urap Sayur"
+sayur = [
+    "🥬 Sayur Bayam", "🥦 Tumis Kangkung", "🥕 Capcay", "🍲 Sayur Asem", "🥣 Sup Wortel", 
+    "🥗 Gado-Gado", "🥒 Lalapan", "🍛 Sayur Lodeh", "🥦 Tumis Brokoli", "🥗 Urap Sayur"
 ]
 
-buah label = tk.Label(🍇)= [
-    "Pisang", "Apel", "Pepaya", "Jeruk", "Semangka", 
-    "Melon", "Nanas", "Mangga", "Anggur", "Salak"
+buah = [
+    "🍌 Pisang", "🍎 Apel", "🍈 Pepaya", "🍊 Jeruk", "🍉 Semangka", 
+    "🍈 Melon", "🍍 Nanas", "🥭 Mangga", "🍇 Anggur", "🍎 Salak"
 ]
 
-susu label = tk.Label(🥛)= [
-    "Susu Sapi", "Susu Kedelai", "Yogurt", "Kefir", "Susu Almond", 
-    "Susu UHT", "Susu Skim", "Susu Bubuk", "Susu Coklat", "Susu Full Cream"
+susu = [
+    "🥛 Susu Sapi", "🌱 Susu Kedelai", "🍶 Yogurt", "🥛 Kefir", "🌰 Susu Almond", 
+    "🥤 Susu UHT", "🥛 Susu Skim", "🥄 Susu Bubuk", "🍫 Susu Coklat", "🥛 Susu Full Cream"
 ]
+
 
 # Fungsi membuat rekomendasi menu lengkap
 def buat_menu_4_sehat_5_sempurna(jumlah=10):
