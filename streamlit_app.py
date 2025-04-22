@@ -90,7 +90,6 @@ elif menu == "📖 Tentang":
 Aplikasi ini dibuat untuk memberikan edukasi gizi secara ringan, sederhana, dan menyenangkan.
 
 - Dirancang untuk mendampingi kamu menjaga pola makan sehat 🍽️
-- Cocok untuk semua usia, terutama buat yang sedang LDR dan pengen jagain pola makan satu sama lain 😋
 
 Sumber acuan:
 - Kemenkes RI
