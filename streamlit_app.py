@@ -1,4 +1,36 @@
 import streamlit as st
+from PIL import Image
+
+# Atur konfigurasi halaman
+st.set_page_config(page_title="Selamat Datang di KaloriKu", page_icon="🍱", layout="centered")
+
+# Gambar / logo aplikasi (opsional)
+# image = Image.open("logo.png")
+# st.image(image, use_column_width=True)
+
+# Judul
+st.title("🍱 KaloriKu - Aplikasi Gizi Sehatmu")
+st.markdown("""
+Selamat datang di **KaloriKu**, aplikasi sederhana untuk membantu kamu:
+
+- Menghitung kebutuhan kalori harian berdasarkan berat dan tinggi badan.
+- Mendapatkan rekomendasi makanan sehat berdasarkan prinsip 4 Sehat 5 Sempurna.
+- Edukasi gizi yang ringan dan menyenangkan untuk semua usia.
+
+---
+
+""")
+
+# Tombol navigasi (bisa diganti pakai multipage atau option-menu)
+st.subheader("👀 Mulai Eksplorasi:")
+if st.button("🔢 Hitung Kebutuhan Kalori"):
+    st.switch_page("kalori_app.py")  # atau arahkan ke halaman lain jika pakai multipage
+
+if st.button("📖 Tentang Gizi Seimbang"):
+    st.info("Fitur ini sedang dikembangkan. Nantikan update berikutnya ya! 😄")
+
+
+import streamlit as st
 import random
 
 # Fungsi menghitung kebutuhan kalori berdasarkan rumus Mifflin-St Jeor
