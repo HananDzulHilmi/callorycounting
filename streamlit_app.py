@@ -9,27 +9,7 @@ def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
         bmr = 10 * b_kg + 6.25 * t_cm - 5 * usia - 161
     return int(bmr * 1.2)  # diasumsikan aktivitas ringan
 
-# Contoh 1000+ menu sehat (simulasi, bisa ditambahkan database makanan asli)
-menu_sehat = [f"Makanan Sehat #{i+1}" for i in range(1000)]
-
-# Judul aplikasi
-st.title("Kalkulator Kebutuhan Kalori Harian")
-st.subheader("Dengan Rekomendasi Menu 4 Sehat 5 Sempurna 🍚🥦🥩🍊🥛")
-
-# Input pengguna
-nama = st.text_input("Nama kamu")
-bb = st.number_input("Berat badan (kg)", min_value=10.0, max_value=300.0, step=0.5)
-tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
-usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
-gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
-
-# Tombol untuk hitung
-if st.button("Hitung Kalori"):
-    kalori = hitung_kalori(bb, tb, usia, gender)
-    st.success(f"{nama}, kebutuhan kalori harianmu diperkirakan sekitar {kalori} kalori.")
-
 # Data 4 sehat 5 sempurna
-
 karbo = [
     "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
     "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
@@ -62,3 +42,25 @@ def buat_menu_4_sehat_5_sempurna(jumlah=10):
         menu = f"{random.choice(karbo)} + {random.choice(lauk)} + {random.choice(sayur)} + {random.choice(buah)} + {random.choice(susu)}"
         menu_list.append(menu)
     return menu_list
+
+# Judul aplikasi
+st.title("Kalkulator Kebutuhan Kalori Harian")
+st.subheader("Dengan Rekomendasi Menu 4 Sehat 5 Sempurna 🍚🥦🥩🍊🥛")
+
+# Input pengguna
+nama = st.text_input("Nama kamu")
+bb = st.number_input("Berat badan (kg)", min_value=10.0, max_value=300.0, step=0.5)
+tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
+usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
+gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
+
+# Tombol untuk hitung
+if st.button("Hitung Kalori"):
+    kalori = hitung_kalori(bb, tb, usia, gender)
+    st.success(f"{nama}, kebutuhan kalori harianmu diperkirakan sekitar {kalori} kalori.")
+
+    # Tampilkan rekomendasi makanan secara acak
+    st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
+    rekomendasi = buat_menu_4_sehat_5_sempurna(10)
+    for i, menu in enumerate(rekomendasi, 1):
+        st.markdown(f"{i}. {menu}")
