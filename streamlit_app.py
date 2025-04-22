@@ -1,43 +1,64 @@
 import streamlit as st
+import random
 
-# Fungsi menghitung BMR (Mifflin-St Jeor)
-def hitung_bmr(jenis_kelamin, berat, tinggi, umur):
-    if jenis_kelamin == 'Pria':
-        return 10 * berat + 6.25 * tinggi - 5 * umur + 5
-    else:  # Wanita
-        return 10 * berat + 6.25 * tinggi - 5 * umur - 161
-
-# Mapping tingkat aktivitas ke faktor kalori
-faktor_aktivitas = {
-    "Tidak aktif (BMR x 1.2)": 1.2,
-    "Sedikit aktif (BMR x 1.375)": 1.375,
-    "Cukup aktif (BMR x 1.55)": 1.55,
-    "Sangat aktif (BMR x 1.725)": 1.725,
-    "Ekstra aktif (BMR x 1.9)": 1.9
-}
-
-# Konfigurasi halaman
-st.set_page_config(page_title="Kalkulator Kalori", layout="centered")
-st.title("🔥 Kalkulator Kebutuhan Kalori Harian")
-st.markdown("### Hitung kebutuhan kalori harian kamu berdasarkan berat badan, tinggi badan, dan aktivitas.")
-
-# Input Form
-with st.form("form_kalori"):
-    nama = st.text_input("Nama lengkap")
-    jenis_kelamin = st.radio("Jenis Kelamin", ["Pria", "Wanita"], horizontal=True)
-    umur = st.number_input("Umur (tahun)", min_value=10, max_value=100, value=25)
-    berat = st.number_input("Berat Badan (kg)", min_value=30.0, max_value=200.0, value=60.0)
-    tinggi = st.number_input("Tinggi Badan (cm)", min_value=100.0, max_value=250.0, value=170.0)
-    aktivitas = st.selectbox("Tingkat Aktivitas", list(faktor_aktivitas.keys()))
-    submit = st.form_submit_button("Hitung Kalori")
-
-# Logika setelah tombol diklik
-if submit:
-    if not nama:
-        st.warning("Nama tidak boleh kosong.")
+# Fungsi menghitung kebutuhan kalori berdasarkan rumus Mifflin-St Jeor
+def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
+    if gender == 'Laki-laki':
+        bmr = 10 * b_kg + 6.25 * t_cm - 5 * usia + 5
     else:
-        bmr = hitung_bmr(jenis_kelamin, berat, tinggi, umur)
-        kalori = bmr * faktor_aktivitas[aktivitas]
-        
-        st.success(f"📊 Hai **{nama}**, kebutuhan kalori harian kamu adalah **{kalori:.2f} kkal**.")
-        st.caption("Perhitungan menggunakan rumus Mifflin-St Jeor berdasarkan data yang kamu masukkan.")
+        bmr = 10 * b_kg + 6.25 * t_cm - 5 * usia - 161
+    return int(bmr * 1.2)  # diasumsikan aktivitas ringan
+
+# Contoh 1000+ menu sehat (simulasi, bisa ditambahkan database makanan asli)
+menu_sehat = [f"Makanan Sehat #{i+1}" for i in range(1000)]
+
+# Judul aplikasi
+st.title("Kalkulator Kebutuhan Kalori Harian")
+st.subheader("Dengan Rekomendasi Menu 4 Sehat 5 Sempurna 🍚🥦🥩🍊🥛")
+
+# Input pengguna
+nama = st.text_input("Nama kamu")
+bb = st.number_input("Berat badan (kg)", min_value=10.0, max_value=300.0, step=0.5)
+tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
+usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
+gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
+
+# Tombol untuk hitung
+if st.button("Hitung Kalori"):
+    kalori = hitung_kalori(bb, tb, usia, gender)
+    st.success(f"{nama}, kebutuhan kalori harianmu diperkirakan sekitar {kalori} kalori.")
+
+   # Data 4 sehat 5 sempurna
+
+karbo = [
+    "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
+    "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
+]
+
+lauk = [
+    "Telur Dadar", "Tempe Goreng", "Tahu Bacem", "Ayam Rebus", "Ikan Bakar", 
+    "Daging Sapi Panggang", "Udang Saus Tiram", "Tuna Kukus", "Ayam Kukus", "Telur Rebus"
+]
+
+sayur = [
+    "Sayur Bayam", "Tumis Kangkung", "Capcay", "Sayur Asem", "Sup Wortel", 
+    "Gado-Gado", "Lalapan", "Sayur Lodeh", "Tumis Brokoli", "Urap Sayur"
+]
+
+buah = [
+    "Pisang", "Apel", "Pepaya", "Jeruk", "Semangka", 
+    "Melon", "Nanas", "Mangga", "Anggur", "Salak"
+]
+
+susu = [
+    "Susu Sapi", "Susu Kedelai", "Yogurt", "Kefir", "Susu Almond", 
+    "Susu UHT", "Susu Skim", "Susu Bubuk", "Susu Coklat", "Susu Full Cream"
+]
+
+# Fungsi membuat rekomendasi menu lengkap
+def buat_menu_4_sehat_5_sempurna(jumlah=10):
+    menu_list = []
+    for _ in range(jumlah):
+        menu = f"{random.choice(karbo)} + {random.choice(lauk)} + {random.choice(sayur)} + {random.choice(buah)} + {random.choice(susu)}"
+        menu_list.append(menu)
+    return menu_list
