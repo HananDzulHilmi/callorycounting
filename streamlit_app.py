@@ -6,29 +6,73 @@ st.set_page_config(page_title="KaloriKu", page_icon="🍱", layout="centered")
 
 # Data makanan sehat
 karbo = [
-    "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
-    "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
+    ("🍚 Nasi Putih", "175 kkal", "150 gram"),
+    ("🍚 Nasi Merah", "160 kkal", "150 gram"),
+    ("🌽 Nasi Jagung", "155 kkal", "150 gram"),
+    ("🥔 Kentang Rebus", "140 kkal", "150 gram"),
+    ("🌿 Singkong Kukus", "135 kkal", "150 gram"),
+    ("🥣 Oatmeal", "150 kkal", "40 gram"),
+    ("🍞 Roti Gandum", "120 kkal", "60 gram"),
+    ("🍙 Lontong", "130 kkal", "150 gram"),
+    ("🍜 Mie Jagung", "145 kkal", "100 gram"),
+    ("🍠 Ubi Rebus", "110 kkal", "100 gram"),
 ]
+
 
 lauk = [
-    "Telur Dadar", "Tempe Goreng", "Tahu Bacem", "Ayam Rebus", "Ikan Bakar", 
-    "Daging Sapi Panggang", "Udang Saus Tiram", "Tuna Kukus", "Ayam Kukus", "Telur Rebus"
+    ("🍳 Telur Dadar", "180 kkal", "60 gram"),
+    ("🍽️ Tempe Goreng", "200 kkal", "80 gram"),
+    ("🍢 Tahu Bacem", "160 kkal", "80 gram"),
+    ("🍗 Ayam Rebus", "190 kkal", "100 gram"),
+    ("🐟 Ikan Bakar", "180 kkal", "100 gram"),
+    ("🥩 Daging Sapi Panggang", "250 kkal", "100 gram"),
+    ("🦐 Udang Saus Tiram", "170 kkal", "100 gram"),
+    ("🐟 Tuna Kukus", "160 kkal", "100 gram"),
+    ("🍗 Ayam Kukus", "175 kkal", "100 gram"),
+    ("🥚 Telur Rebus", "90 kkal", "50 gram"),
 ]
 
+
 sayur = [
-    "Sayur Bayam", "Tumis Kangkung", "Capcay", "Sayur Asem", "Sup Wortel", 
-    "Gado-Gado", "Lalapan", "Sayur Lodeh", "Tumis Brokoli", "Urap Sayur"
+    ("🥬 Sayur Bayam", "40 kkal", "100 gram"),
+    ("🥦 Tumis Kangkung", "45 kkal", "100 gram"),
+    ("🥕 Capcay", "60 kkal", "120 gram"),
+    ("🍲 Sayur Asem", "50 kkal", "150 gram"),
+    ("🥣 Sup Wortel", "55 kkal", "120 gram"),
+    ("🥗 Gado-Gado", "120 kkal", "200 gram"),
+    ("🥒 Lalapan", "30 kkal", "50 gram"),
+    ("🍛 Sayur Lodeh", "70 kkal", "150 gram"),
+    ("🥦 Tumis Brokoli", "60 kkal", "100 gram"),
+    ("🥗 Urap Sayur", "50 kkal", "100 gram"),
 ]
 
 buah = [
-    "Pisang", "Apel", "Pepaya", "Jeruk", "Semangka", 
-    "Melon", "Nanas", "Mangga", "Anggur", "Salak"
+    ("🍌 Pisang", "90 kkal", "100 gram"),
+    ("🍎 Apel", "80 kkal", "125 gram"),
+    ("🍈 Pepaya", "70 kkal", "150 gram"),
+    ("🍊 Jeruk", "60 kkal", "130 gram"),
+    ("🍉 Semangka", "50 kkal", "200 gram"),
+    ("🍈 Melon", "55 kkal", "150 gram"),
+    ("🍍 Nanas", "60 kkal", "150 gram"),
+    ("🥭 Mangga", "90 kkal", "150 gram"),
+    ("🍇 Anggur", "70 kkal", "100 gram"),
+    ("🍎 Salak", "65 kkal", "100 gram"),
 ]
 
+
 susu = [
-    "Susu Sapi", "Susu Kedelai", "Yogurt", "Kefir", "Susu Almond", 
-    "Susu UHT", "Susu Skim", "Susu Bubuk", "Susu Coklat", "Susu Full Cream"
+    ("🥛 Susu Sapi", "120 kkal", "200 gram"),
+    ("🌱 Susu Kedelai", "100 kkal", "200 gram"),
+    ("🍶 Yogurt", "110 kkal", "150 gram"),
+    ("🥛 Kefir", "100 kkal", "150 gram"),
+    ("🌰 Susu Almond", "80 kkal", "200 gram"),
+    ("🥤 Susu UHT", "130 kkal", "250 gram"),
+    ("🥛 Susu Skim", "90 kkal", "200 gram"),
+    ("🥄 Susu Bubuk", "150 kkal", "25 gram"),
+    ("🍫 Susu Coklat", "160 kkal", "250 gram"),
+    ("🥛 Susu Full Cream", "140 kkal", "200 gram"),
 ]
+
 
 # Fungsi membuat rekomendasi menu lengkap
 def buat_menu_4_sehat_5_sempurna(jumlah=10):
