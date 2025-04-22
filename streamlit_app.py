@@ -5,27 +5,27 @@ import random
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
 # Data makanan sehat
-karbo icon_image=image.open("🍚")= [
+karbo label = tk.Label(🍚)= [
     "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
     "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
 ]
 
-lauk icon_image=image.open("🍗")= [
+lauk label = tk.Label(🍗)= [
     "Telur Dadar", "Tempe Goreng", "Tahu Bacem", "Ayam Rebus", "Ikan Bakar", 
     "Daging Sapi Panggang", "Udang Saus Tiram", "Tuna Kukus", "Ayam Kukus", "Telur Rebus"
 ]
 
-sayur icon_image=image.open("🥬")= [
+sayur label = tk.Label(🥬)= [
     "Sayur Bayam", "Tumis Kangkung", "Capcay", "Sayur Asem", "Sup Wortel", 
     "Gado-Gado", "Lalapan", "Sayur Lodeh", "Tumis Brokoli", "Urap Sayur"
 ]
 
-buah icon_image=image.open("🍇")= [
+buah label = tk.Label(🍇)= [
     "Pisang", "Apel", "Pepaya", "Jeruk", "Semangka", 
     "Melon", "Nanas", "Mangga", "Anggur", "Salak"
 ]
 
-susu icon_image=image.open("🥛")= [
+susu label = tk.Label(🥛)= [
     "Susu Sapi", "Susu Kedelai", "Yogurt", "Kefir", "Susu Almond", 
     "Susu UHT", "Susu Skim", "Susu Bubuk", "Susu Coklat", "Susu Full Cream"
 ]
