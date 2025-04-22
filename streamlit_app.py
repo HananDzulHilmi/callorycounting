@@ -2,30 +2,30 @@ import streamlit as st
 import random
 
 # Atur halaman
-st.set_page_config(page_title="KaloriKu", page_icon="🍱", layout="centered")
+st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
 # Data makanan sehat
-karbo = [
+karbo st.set_page_config(page_icon="🍚")= [
     "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
     "Oatmeal", "Roti Gandum", "Lontong", "Mie Jagung", "Ubi Rebus"
 ]
 
-lauk = [
+lauk st.set_page_config(page_icon="🍗")= [
     "Telur Dadar", "Tempe Goreng", "Tahu Bacem", "Ayam Rebus", "Ikan Bakar", 
     "Daging Sapi Panggang", "Udang Saus Tiram", "Tuna Kukus", "Ayam Kukus", "Telur Rebus"
 ]
 
-sayur = [
+sayur st.set_page_config(page_icon="🥬")= [
     "Sayur Bayam", "Tumis Kangkung", "Capcay", "Sayur Asem", "Sup Wortel", 
     "Gado-Gado", "Lalapan", "Sayur Lodeh", "Tumis Brokoli", "Urap Sayur"
 ]
 
-buah = [
+buah st.set_page_config(page_icon="🍇")= [
     "Pisang", "Apel", "Pepaya", "Jeruk", "Semangka", 
     "Melon", "Nanas", "Mangga", "Anggur", "Salak"
 ]
 
-susu = [
+susu st.set_page_config(page_icon="🥛")= [
     "Susu Sapi", "Susu Kedelai", "Yogurt", "Kefir", "Susu Almond", 
     "Susu UHT", "Susu Skim", "Susu Bubuk", "Susu Coklat", "Susu Full Cream"
 ]
