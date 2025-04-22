@@ -5,73 +5,44 @@ import random
 st.set_page_config(page_title="calorie counting", page_icon="🍱", layout="centered")
 
 # DATA dengan emoji dan estimasi kalori (kkal per porsi)
-karbo = [
-    ("🍚 Nasi Putih", "175 kkal", "150 gram"),
-    ("🍚 Nasi Merah", "160 kkal", "150 gram"),
-    ("🌽 Nasi Jagung", "155 kkal", "150 gram"),
-    ("🥔 Kentang Rebus", "140 kkal", "150 gram"),
-    ("🌿 Singkong Kukus", "135 kkal", "150 gram"),
-    ("🥣 Oatmeal", "150 kkal", "40 gram"),
-    ("🍞 Roti Gandum", "120 kkal", "60 gram"),
-    ("🍙 Lontong", "130 kkal", "150 gram"),
-    ("🍜 Mie Jagung", "145 kkal", "100 gram"),
-    ("🍠 Ubi Rebus", "110 kkal", "100 gram"),
-]
+ # Data makanan
+                karbo = [
+                    ("🍚 Nasi Putih", "175 kkal", "150 gram"),
+                    ("🍞 Roti Gandum", "120 kkal", "60 gram"),
+                    ("🥣 Oatmeal", "150 kkal", "40 gram"),
+                    ("🥔 Kentang Rebus", "140 kkal", "150 gram"),
+                    ("🍠 Ubi Rebus", "110 kkal", "100 gram")
+                ]
+                lauk = [
+                    ("🍳 Telur Dadar", "180 kkal", "60 gram"),
+                    ("🍽️ Tempe Goreng", "200 kkal", "80 gram"),
+                    ("🐟 Ikan Bakar", "180 kkal", "100 gram"),
+                    ("🍗 Ayam Kukus", "175 kkal", "100 gram"),
+                    ("🥩 Daging Sapi", "250 kkal", "100 gram")
+                ]
+                sayur = [
+                    ("🥬 Sayur Bayam", "40 kkal", "100 gram"),
+                    ("🥦 Tumis Brokoli", "60 kkal", "100 gram"),
+                    ("🍲 Sayur Asem", "50 kkal", "150 gram"),
+                    ("🥗 Urap Sayur", "50 kkal", "100 gram"),
+                    ("🥕 Capcay", "60 kkal", "120 gram")
+                ]
+                buah = [
+                    ("🍌 Pisang", "90 kkal", "100 gram"),
+                    ("🍎 Apel", "80 kkal", "125 gram"),
+                    ("🍊 Jeruk", "60 kkal", "130 gram"),
+                    ("🍈 Pepaya", "70 kkal", "150 gram"),
+                    ("🍇 Anggur", "70 kkal", "100 gram")
+                ]
+                susu = [
+                    ("🥛 Susu Sapi", "120 kkal", "200 gram"),
+                    ("🌱 Susu Kedelai", "100 kkal", "200 gram"),
+                    ("🍶 Yogurt", "110 kkal", "150 gram"),
+                    ("🌰 Susu Almond", "80 kkal", "200 gram"),
+                    ("🥛 Susu Full Cream", "140 kkal", "200 gram")
+                ]
 
-lauk = [
-    ("🍳 Telur Dadar", "180 kkal", "60 gram"),
-    ("🍽️ Tempe Goreng", "200 kkal", "80 gram"),
-    ("🍢 Tahu Bacem", "160 kkal", "80 gram"),
-    ("🍗 Ayam Rebus", "190 kkal", "100 gram"),
-    ("🐟 Ikan Bakar", "180 kkal", "100 gram"),
-    ("🥩 Daging Sapi Panggang", "250 kkal", "100 gram"),
-    ("🦐 Udang Saus Tiram", "170 kkal", "100 gram"),
-    ("🐟 Tuna Kukus", "160 kkal", "100 gram"),
-    ("🍗 Ayam Kukus", "175 kkal", "100 gram"),
-    ("🥚 Telur Rebus", "90 kkal", "50 gram"),
-]
-
-
-sayur = [
-    ("🥬 Sayur Bayam", "40 kkal", "100 gram"),
-    ("🥦 Tumis Kangkung", "45 kkal", "100 gram"),
-    ("🥕 Capcay", "60 kkal", "120 gram"),
-    ("🍲 Sayur Asem", "50 kkal", "150 gram"),
-    ("🥣 Sup Wortel", "55 kkal", "120 gram"),
-    ("🥗 Gado-Gado", "120 kkal", "200 gram"),
-    ("🥒 Lalapan", "30 kkal", "50 gram"),
-    ("🍛 Sayur Lodeh", "70 kkal", "150 gram"),
-    ("🥦 Tumis Brokoli", "60 kkal", "100 gram"),
-    ("🥗 Urap Sayur", "50 kkal", "100 gram"),
-]
-
-buah = [
-    ("🍌 Pisang", "90 kkal", "100 gram"),
-    ("🍎 Apel", "80 kkal", "125 gram"),
-    ("🍈 Pepaya", "70 kkal", "150 gram"),
-    ("🍊 Jeruk", "60 kkal", "130 gram"),
-    ("🍉 Semangka", "50 kkal", "200 gram"),
-    ("🍈 Melon", "55 kkal", "150 gram"),
-    ("🍍 Nanas", "60 kkal", "150 gram"),
-    ("🥭 Mangga", "90 kkal", "150 gram"),
-    ("🍇 Anggur", "70 kkal", "100 gram"),
-    ("🍎 Salak", "65 kkal", "100 gram"),
-]
-
-susu = [
-    ("🥛 Susu Sapi", "120 kkal", "200 gram"),
-    ("🌱 Susu Kedelai", "100 kkal", "200 gram"),
-    ("🍶 Yogurt", "110 kkal", "150 gram"),
-    ("🥛 Kefir", "100 kkal", "150 gram"),
-    ("🌰 Susu Almond", "80 kkal", "200 gram"),
-    ("🥤 Susu UHT", "130 kkal", "250 gram"),
-    ("🥛 Susu Skim", "90 kkal", "200 gram"),
-    ("🥄 Susu Bubuk", "150 kkal", "25 gram"),
-    ("🍫 Susu Coklat", "160 kkal", "250 gram"),
-    ("🥛 Susu Full Cream", "140 kkal", "200 gram"),
-]
-
- # Pilih makanan secara acak
+                # Pilih makanan secara acak
                 selected_karbo = random.choice(karbo)
                 selected_lauk = random.choice(lauk)
                 selected_sayur = random.choice(sayur)
@@ -92,7 +63,22 @@ susu = [
 
                 st.markdown(f"### 🔢 Total Kalori Menu: **{total_kalori} kkal**")
 
+                # Pie Chart
+                fig, ax = plt.subplots()
+                ax.pie(kalori_list, labels=["Karbo", "Lauk", "Sayur", "Buah", "Susu"], autopct='%1.1f%%')
+                ax.axis('equal')
+                st.pyplot(fig)
 
+                if st.button("💾 Simpan Menu Ini"):
+                    st.session_state['history'].append({
+                        "menu": menu,
+                        "total": total_kalori
+                    })
+                    st.success("✅ Menu berhasil disimpan!")
+            else:
+                st.error("Masukkan berat dan tinggi badan yang valid.")
+    else:
+        st.warning("Silakan login terlebih dahulu di sidebar.")
 # Fungsi menghitung kebutuhan kalori
 def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
     if gender == 'Laki-laki':
