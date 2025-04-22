@@ -28,7 +28,7 @@ if st.button("Hitung Kalori"):
     kalori = hitung_kalori(bb, tb, usia, gender)
     st.success(f"{nama}, kebutuhan kalori harianmu diperkirakan sekitar {kalori} kalori.")
 
-   # Data 4 sehat 5 sempurna
+# Data 4 sehat 5 sempurna
 
 karbo = [
     "Nasi Putih", "Nasi Merah", "Nasi Jagung", "Kentang Rebus", "Singkong Kukus", 
