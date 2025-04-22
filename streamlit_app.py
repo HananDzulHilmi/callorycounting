@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 # Set konfigurasi halaman
-st.set_page_config(page_title="KaloriKu", page_icon="🍱", layout="centered")
+st.set_page_config(page_title="calorie counting", page_icon="🍱", layout="centered")
 
 # DATA dengan emoji dan estimasi kalori (kkal per porsi)
 karbo = [
@@ -71,19 +71,27 @@ susu = [
     ("🥛 Susu Full Cream", "140 kkal", "200 gram"),
 ]
 
-# Fungsi membuat menu dengan total kalori
-def buat_menu_4_sehat_5_sempurna(jumlah=10):
-    menu_list = []
-    for _ in range(jumlah):
-        k = random.choice(karbo)
-        l = random.choice(lauk)
-        s = random.choice(sayur)
-        b = random.choice(buah)
-        u = random.choice(susu)
-        total_kalori = k[1] + l[1] + s[1] + b[1] + u[1]
-        menu_str = f"{k[0]} ({k[1]} kkal) + {l[0]} ({l[1]} kkal) + {s[0]} ({s[1]} kkal) + {b[0]} ({b[1]} kkal) + {u[0]} ({u[1]} kkal)"
-        menu_list.append((menu_str, total_kalori))
-    return menu_list
+ # Pilih makanan secara acak
+                selected_karbo = random.choice(karbo)
+                selected_lauk = random.choice(lauk)
+                selected_sayur = random.choice(sayur)
+                selected_buah = random.choice(buah)
+                selected_susu = random.choice(susu)
+
+                menu = [selected_karbo, selected_lauk, selected_sayur, selected_buah, selected_susu]
+                total_kalori = 0
+                kalori_list = []
+
+                st.subheader("🍱 Rekomendasi Menu")
+                for item in menu:
+                    nama, kalori, berat = item
+                    kal = int(kalori.split()[0])
+                    kalori_list.append(kal)
+                    total_kalori += kal
+                    st.markdown(f"✅ **{nama}** — {kalori}, {berat}")
+
+                st.markdown(f"### 🔢 Total Kalori Menu: **{total_kalori} kkal**")
+
 
 # Fungsi menghitung kebutuhan kalori
 def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
