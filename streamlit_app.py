@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 # Atur halaman
-st.set_page_config(page_title="KaloriKu", page_icon="🍱", layout="centered")
+st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
 # Data makanan sehat
 karbo = [
@@ -95,9 +95,9 @@ menu = st.sidebar.selectbox("Navigasi", ["🏠 Halaman Utama", "🔢 Kalkulator 
 
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
-    st.title("🍱 KaloriKu - Aplikasi Gizi Sehatmu")
+    st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
     st.markdown("""
-Selamat datang di **KaloriKu**, aplikasi sederhana untuk membantu kamu:
+Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
 - 🔢 Menghitung kebutuhan kalori harian
 - 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna
@@ -130,7 +130,7 @@ elif menu == "🔢 Kalkulator Kalori":
 
 # Halaman Tentang
 elif menu == "📖 Tentang":
-    st.title("📖 Tentang Aplikasi KaloriKu")
+    st.title("📖 Tentang Aplikasi Calorie Counting")
     st.markdown("""
 Aplikasi ini dibuat untuk memberikan edukasi gizi secara ringan, sederhana, dan menyenangkan.
 
