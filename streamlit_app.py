@@ -105,9 +105,6 @@ Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
 ---
 
-Silakan pilih fitur dari sidebar 👈 untuk memulai!
-    """)
-   
 
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
