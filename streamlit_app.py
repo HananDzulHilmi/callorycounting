@@ -106,6 +106,7 @@ Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 ---
 
 
+
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
     st.title("🔢 Kalkulator Kebutuhan Kalori Harian")
