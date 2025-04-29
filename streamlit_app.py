@@ -182,6 +182,18 @@ elif menu == "🔢 Kalkulator Kalori":
     tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
     usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
     gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
+     if tingkat_aktivitas.lower() == 'ringan':
+        kebutuhan_kalori = bmr * 1.2
+    elif tingkat_aktivitas.lower() == 'sedang':
+        kebutuhan_kalori = bmr * 1.375
+    elif tingkat_aktivitas.lower() == 'berat':
+        kebutuhan_kalori = bmr * 1.55
+    elif tingkat_aktivitas.lower() == 'sangat berat':
+        kebutuhan_kalori = bmr * 1.725
+    else:
+        kebutuhan_kalori = bmr * 1.2  # Default jika tidak valid
+
+    return bmr, kebutuhan_kalori
 
     if st.button("Hitung Kalori"):
         kalori = hitung_kalori(bb, tb, usia, gender)
