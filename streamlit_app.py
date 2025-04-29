@@ -125,15 +125,15 @@ elif menu == "🔢 Kalkulator Kalori":
         "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)": 1.9
     }
 
-    if st.button("Hitung Kalori"):
-        multiplier = aktivitas_dict[aktivitas]
-        kalori = hitung_kalori(nama, bb, tb, usia, gender, multiplier)
-        st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
-        st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
-        rekomendasi = buat_menu_4_sehat_5_sempurna(10)
-        for i, menu_item in enumerate(rekomendasi, 1):
-            st.markdown(f"{i}. {menu_item}")
-        st.balloons()
+   if st.button("Hitung Kalori"):
+    multiplier = aktivitas_dict[aktivitas]
+    bmr, kalori = hitung_bmr(gender, bb, tb, usia, multiplier)
+    st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori:.0f} kkal.")
+    st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
+    rekomendasi = buat_menu_4_sehat_5_sempurna(10)
+    for i, menu_item in enumerate(rekomendasi, 1):
+        st.markdown(f"{i}. {menu_item}")
+    st.balloons()
 
 # Halaman Tentang
 elif menu == "📖 Tentang":
