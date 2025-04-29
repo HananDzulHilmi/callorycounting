@@ -130,7 +130,7 @@ elif menu == "🔢 Kalkulator Kalori":
         kalori = hitung_kalori(nama, bb, tb, usia, gender, multiplier)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
-        rekomendasi = buat_menu_4_sehat_5_sempurna(5)
+        rekomendasi = buat_menu_4_sehat_5_sempurna(10)
         for i, menu_item in enumerate(rekomendasi, 1):
             st.markdown(f"{i}. {menu_item}")
         st.balloons()
