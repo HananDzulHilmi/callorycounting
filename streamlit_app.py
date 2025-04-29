@@ -215,17 +215,20 @@ elif menu == "🔢 Kalkulator Kalori":
 
 st.balloons() # Animasi balon setelah perhitungan dan saran ditampilkan
 
-# Tentang Aplikasi
+#Tentang Menu
 elif menu == "📖 Tentang":
     st.title("📖 Tentang Aplikasi Calorie Counting")
     st.markdown("""
-Aplikasi ini dibuat untuk memberikan edukasi gizi secara ringan, sederhana, dan menyenangkan.
+Aplikasi ini dibuat untuk memberikan edukasi gizi secara ringan, sederhana, dan menyenangkan.  
+Dirancang untuk mendampingi kamu menjaga pola makan sehat 🍽️
 
-- Dirancang untuk mendampingi kamu menjaga pola makan sehat 🍽️
+Fitur utama yang tersedia dalam aplikasi ini meliputi:
+- Kalkulator kebutuhan kalori harian berdasarkan berat badan, tinggi badan, usia, jenis kelamin, dan aktivitas fisik.
+- Rekomendasi menu 4 sehat 5 sempurna yang sesuai dengan kebutuhan kalori harianmu.
+- Informasi edukatif tentang gizi dan keseimbangan makanan.
 
-**Sumber acuan:**
-- Kemenkes RI
-- Data USDA & BPOM
+Kami berharap aplikasi ini bisa membantu kamu lebih bijak dalam memilih asupan makanan dan menjaga kesehatan tubuh secara menyenangkan. 💪😊
+""")
 
 ---
 
