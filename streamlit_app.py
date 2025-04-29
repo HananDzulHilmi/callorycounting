@@ -88,7 +88,7 @@ if menu == "🏠 Halaman Utama":
     }
     </style>
     """,
-    .overlay {
+   .overlay {
         background-color: rgba(0, 0, 0, 0.5); /* Hitam transparan */
         padding: 20px;
         border-radius: 10px;
@@ -99,11 +99,7 @@ if menu == "🏠 Halaman Utama":
         <h1>Judul yang Terlihat Jelas</h1>
         <p>Ini adalah teks yang tetap terbaca meskipun ada gambar di belakangnya.</p>
     </div>
-""", 
-    
-        
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
     
     st.markdown("""
 Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
