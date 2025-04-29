@@ -177,23 +177,30 @@ elif menu == "🔢 Kalkulator Kalori":
     st.title("🔢 Kalkulator Kebutuhan Kalori Harian")
     st.subheader("Dengan Rekomendasi Menu 4 Sehat 5 Sempurna 🍚🥦🥩🍊🥛")
 
-    nama = st.text_input("Nama kamu")
+    Nama = st.text_input("Nama kamu")
     bb = st.number_input("Berat badan (kg)", min_value=10.0, max_value=300.0, step=0.5)
     tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
-    usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
+    Usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
     gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
-     if tingkat_aktivitas.lower() == 'ringan':
-        kebutuhan_kalori = bmr * 1.2
-    elif tingkat_aktivitas.lower() == 'sedang':
-        kebutuhan_kalori = bmr * 1.375
-    elif tingkat_aktivitas.lower() == 'berat':
-        kebutuhan_kalori = bmr * 1.55
-    elif tingkat_aktivitas.lower() == 'sangat berat':
-        kebutuhan_kalori = bmr * 1.725
-    else:
-        kebutuhan_kalori = bmr * 1.2  # Default jika tidak valid
+    tingkat aktivitas = st.selectbox(
+    "Tingkat Aktivitas Harian",
+    [
+        "🛌 Sangat ringan (tidak aktif/fisik minimal)",
+        "🚶 Ringan (jalan kaki ringan, kerja ringan)",
+        "🏃 Sedang (olahraga 3-5 hari/minggu)",
+        "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)",
+        "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)"
+    ]
+)
 
-    return bmr, kebutuhan_kalori
+# Konversi aktivitas ke multiplier
+aktivitas_dict = {
+    "🛌 Sangat ringan (tidak aktif/fisik minimal)": 1.2,
+    "🚶 Ringan (jalan kaki ringan, kerja ringan)": 1.375,
+    "🏃 Sedang (olahraga 3-5 hari/minggu)": 1.55,
+    "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)": 1.725,
+    "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)": 1.9
+}
 
     if st.button("Hitung Kalori"):
         kalori = hitung_kalori(bb, tb, usia, gender,tingkat aktivitas)
