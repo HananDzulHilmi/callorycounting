@@ -116,11 +116,17 @@ Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 Silakan gunakan menu di sebelah kiri untuk mulai 😊
 """)
 
-# Perkenalan Kelompok
+# Halaman Perkenalan Kelompok
 elif menu == "😎 Perkenalan Kelompok":
-    st.header('KELOMPOK 6 (E1-PMIP):')
-    st.image(image_path, caption='dokumentasi kerkom 7')
-    st.write('''
+    st.header("KELOMPOK 6 (E1-PMIP)")
+
+    image_path = 'kerkom_7.jpg'  # Pastikan file gambar ini berada di folder yang sama dengan file .py
+    try:
+        st.image(image_path, caption="Dokumentasi Kerkom 7")
+    except Exception as e:
+        st.warning(f"Gambar tidak ditemukan: {e}")
+
+    st.write("""
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
 1. Hanan Dzul Hilmi (NIM: 2420601)  
@@ -128,7 +134,7 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 3. Subhan Zikri (NIM: 2420667)  
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)  
-''')
+""")
 
 # Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
