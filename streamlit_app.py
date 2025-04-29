@@ -172,42 +172,44 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 5. Clarisha Andini Putri (NIM: 2420582)  
 """)
 
-# Kalkulator Kalori
+# Di dalam menu kalkulator
 elif menu == "🔢 Kalkulator Kalori":
     st.title("🔢 Kalkulator Kebutuhan Kalori Harian")
     st.subheader("Dengan Rekomendasi Menu 4 Sehat 5 Sempurna 🍚🥦🥩🍊🥛")
 
-    Nama = st.text_input("Nama kamu")
+    nama = st.text_input("Nama kamu")
     bb = st.number_input("Berat badan (kg)", min_value=10.0, max_value=300.0, step=0.5)
     tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
-    Usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
+    usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
     gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
 
-# Pilihan tingkat aktivitas
-aktivitas = st.selectbox(
-    "Tingkat Aktivitas Harian",
-    [
-        "🛌 Sangat ringan (tidak aktif/fisik minimal)",
-        "🚶 Ringan (jalan kaki ringan, kerja ringan)",
-        "🏃 Sedang (olahraga 3-5 hari/minggu)",
-        "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)",
-        "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)"
-    ]
-)
+    # Pilihan tingkat aktivitas
+    aktivitas = st.selectbox(
+        "Tingkat Aktivitas Harian",
+        [
+            "🛌 Sangat ringan (tidak aktif/fisik minimal)",
+            "🚶 Ringan (jalan kaki ringan, kerja ringan)",
+            "🏃 Sedang (olahraga 3-5 hari/minggu)",
+            "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)",
+            "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)"
+        ]
+    )
 
-# Konversi ke multiplier
-aktivitas_dict = {
-    "🛌 Sangat ringan (tidak aktif/fisik minimal)": 1.2,
-    "🚶 Ringan (jalan kaki ringan, kerja ringan)": 1.375,
-    "🏃 Sedang (olahraga 3-5 hari/minggu)": 1.55,
-    "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)": 1.725,
-    "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)": 1.9
-}
+    # Konversi ke multiplier
+    aktivitas_dict = {
+        "🛌 Sangat ringan (tidak aktif/fisik minimal)": 1.2,
+        "🚶 Ringan (jalan kaki ringan, kerja ringan)": 1.375,
+        "🏃 Sedang (olahraga 3-5 hari/minggu)": 1.55,
+        "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)": 1.725,
+        "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)": 1.9
+    }
+
     if st.button("Hitung Kalori"):
-        kalori = hitung_kalori(bb, tb, usia, gender,multiplier)
+        multiplier = aktivitas_dict[aktivitas]
+        kalori = hitung_kalori(bb, tb, usia, gender, multiplier)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
-        rekomendasi = buat_menu_4_sehat_5_sempurna(10)
+        rekomendasi = buat_menu_4_sehat_5_sempurna(5)
         for i, menu in enumerate(rekomendasi, 1):
             st.markdown(f"{i}. {menu}")
 
