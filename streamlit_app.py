@@ -4,19 +4,7 @@ import random
 # Atur halaman
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # DATA MENU
 karbo = [
@@ -89,6 +77,19 @@ menu = st.sidebar.selectbox("Navigasi", [
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
+    st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
     st.markdown("""
 Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
