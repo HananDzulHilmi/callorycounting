@@ -104,7 +104,9 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
-    st.write("""
+    st.write(""" 
+    hasi Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
+    
 Berikut anggota tim:
 1. Hanan Dzul Hilmi (NIM: 2420601)  
 2. Syakira Amalia Sari (NIM: 2420670)  
