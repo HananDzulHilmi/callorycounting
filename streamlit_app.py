@@ -153,7 +153,7 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 
 1. Hanan Dzul Hilmi (NIM: 2420601)  
 2. Syakira Amalia Sari (NIM: 2420670)  
-3. Subhan Zikri (NIM: 2420667)  
+3. Subhan Zikry (NIM: 2420667)  
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)  
 """)
