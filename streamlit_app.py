@@ -96,7 +96,7 @@ def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
     return int(bmr * 1.2)
 
 # Sidebar untuk navigasi
-menu = st.sidebar.selectbox("Navigasi", ["🏠 Halaman Utama", "🔢 Kalkulator Kalori", "📖 Tentang"])
+menu = st.sidebar.selectbox("Navigasi", ["🏠 Halaman Utama","😎Perkenalan Kelompok" "🔢 Kalkulator Kalori", "📖 Tentang"])
 
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
@@ -112,7 +112,20 @@ Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
 Silakan gunakan menu di sebelah kiri untuk mulai 😊
 """)
-
+# Perkenalan Kelompok
+if selected == 'Perkenalan':
+    st.header('KELOMPOK 6 (E1-PMIP):')
+    image_path = 'kerkom_7.jpg'  # Ganti dengan path yang sesuai ke file gambar Anda
+    st.image(image_path, caption='dokumentasi kerkom 7')
+    st.write('''
+    Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
+    
+    1. Hanan Dzul Hilmi (NIM: 2420601) 
+    2. Syakira Amalia Sari (NIM: 2420670) 
+    3. Subhan Zikri (NIM: 2420667) 
+    4. Nabila Putri Ramadhani (NIM: 2420630) 
+    5. Clarisha Andini Putri (NIM: 2420582) 
+    
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
     st.title("🔢 Kalkulator Kebutuhan Kalori Harian")
