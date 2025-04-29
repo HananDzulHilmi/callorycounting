@@ -88,12 +88,26 @@ def buat_menu_4_sehat_5_sempurna(jumlah=10):
     return menu_list
 
 # Fungsi menghitung kalori
-def hitung_kalori(b_kg, t_cm, usia=25, gender='Laki-laki'):
-    if gender == 'Laki-laki':
-        bmr = 10 * b_kg + 6.25 * t_cm - 5 * usia + 5
+def hitung_bmr(jenis_kelamin, berat_kg, tinggi_cm, usia_tahun, tingkat_aktivitas):
+    if jenis_kelamin.lower() == 'laki-laki':
+        bmr = 88.362 + (13.397 * berat_kg) + (4.799 * tinggi_cm) - (5.677 * usia_tahun)
+    elif jenis_kelamin.lower() == 'perempuan':
+        bmr = 447.593 + (9.247 * berat_kg) + (3.098 * tinggi_cm) - (4.330 * usia_tahun)
     else:
-        bmr = 10 * b_kg + 6.25 * t_cm - 5 * usia - 161
-    return int(bmr * 1.2)
+        return None, None
+
+    if tingkat_aktivitas.lower() == 'ringan':
+        kebutuhan_kalori = bmr * 1.2
+    elif tingkat_aktivitas.lower() == 'sedang':
+        kebutuhan_kalori = bmr * 1.375
+    elif tingkat_aktivitas.lower() == 'berat':
+        kebutuhan_kalori = bmr * 1.55
+    elif tingkat_aktivitas.lower() == 'sangat berat':
+        kebutuhan_kalori = bmr * 1.725
+    else:
+        kebutuhan_kalori = bmr * 1.2  # Default jika tidak valid
+
+    return bmr, kebutuhan_kalori
 
 # Sidebar untuk navigasi
 menu = st.sidebar.selectbox(
