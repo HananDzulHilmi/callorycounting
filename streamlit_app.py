@@ -107,7 +107,7 @@ st.markdown(
     <style>
     .stApp {
         background-color: #bab86c;  /* Warna latar belakang baru */
-        color: #c99548;             /* Warna teks baru */
+        color: #FFFFFF;             /* Warna teks baru */
         font-size: 18px;            /* Ukuran font tetap */
     }
     .css-1d391kg {
