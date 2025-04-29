@@ -182,7 +182,9 @@ elif menu == "🔢 Kalkulator Kalori":
     tb = st.number_input("Tinggi badan (cm)", min_value=50.0, max_value=250.0, step=0.5)
     Usia = st.number_input("Usia (tahun)", min_value=1, max_value=120, value=25)
     gender = st.radio("Jenis Kelamin", ["Laki-laki", "Perempuan"])
-    tingkat aktivitas = st.selectbox(
+
+# Pilihan tingkat aktivitas
+aktivitas = st.selectbox(
     "Tingkat Aktivitas Harian",
     [
         "🛌 Sangat ringan (tidak aktif/fisik minimal)",
@@ -193,7 +195,7 @@ elif menu == "🔢 Kalkulator Kalori":
     ]
 )
 
-# Konversi aktivitas ke multiplier
+# Konversi ke multiplier
 aktivitas_dict = {
     "🛌 Sangat ringan (tidak aktif/fisik minimal)": 1.2,
     "🚶 Ringan (jalan kaki ringan, kerja ringan)": 1.375,
@@ -201,9 +203,8 @@ aktivitas_dict = {
     "🏋️ Berat (aktivitas fisik berat atau olahraga intensif)": 1.725,
     "🏃‍♂️ Sangat berat (latihan keras tiap hari atau pekerjaan fisik berat)": 1.9
 }
-
     if st.button("Hitung Kalori"):
-        kalori = hitung_kalori(bb, tb, usia, gender,tingkat aktivitas)
+        kalori = hitung_kalori(bb, tb, usia, gender,multiplier)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
         rekomendasi = buat_menu_4_sehat_5_sempurna(10)
