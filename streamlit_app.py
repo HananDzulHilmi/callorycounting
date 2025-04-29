@@ -77,18 +77,15 @@ menu = st.sidebar.selectbox("Navigasi", [
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
-    st.markdown(
-    """
+    st.markdown("""
     <style>
     .stApp {
-        background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc");
+        background-image: url("https://images.unsplash.com/photo-1498579809087-ef1e558fd1da");
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-position: center;
+        position: relative;
     }
-    </style>
-    """,
-   .overlay {
+    .overlay {
         background-color: rgba(0, 0, 0, 0.5); /* Hitam transparan */
         padding: 20px;
         border-radius: 10px;
@@ -100,7 +97,7 @@ if menu == "🏠 Halaman Utama":
         <p>Ini adalah teks yang tetap terbaca meskipun ada gambar di belakangnya.</p>
     </div>
 """, unsafe_allow_html=True)
-    
+
     st.markdown("""
 Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
