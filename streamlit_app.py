@@ -6,80 +6,85 @@ st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="cent
 
 # Data makanan sehat
 karbo = [
-    ("🍚 Nasi Putih", "175 kkal", "150 gram"),
-    ("🍚 Nasi Merah", "160 kkal", "150 gram"),
-    ("🌽 Nasi Jagung", "155 kkal", "150 gram"),
-    ("🥔 Kentang Rebus", "140 kkal", "150 gram"),
-    ("🌿 Singkong Kukus", "135 kkal", "150 gram"),
-    ("🥣 Oatmeal", "150 kkal", "40 gram"),
-    ("🍞 Roti Gandum", "120 kkal", "60 gram"),
-    ("🍙 Lontong", "130 kkal", "150 gram"),
-    ("🍜 Mie Jagung", "145 kkal", "100 gram"),
-    ("🍠 Ubi Rebus", "110 kkal", "100 gram"),
+    ("🍚 Nasi Putih", 175, "150 gram"),
+    ("🍚 Nasi Merah", 160, "150 gram"),
+    ("🌽 Nasi Jagung", 155, "150 gram"),
+    ("🥔 Kentang Rebus", 140, "150 gram"),
+    ("🌿 Singkong Kukus", 135, "150 gram"),
+    ("🥣 Oatmeal", 150, "40 gram"),
+    ("🍞 Roti Gandum", 120, "60 gram"),
+    ("🍙 Lontong", 130, "150 gram"),
+    ("🍜 Mie Jagung", 145, "100 gram"),
+    ("🍠 Ubi Rebus", 110, "100 gram"),
 ]
-
 
 lauk = [
-    ("🍳 Telur Dadar", "180 kkal", "60 gram"),
-    ("🍽️ Tempe Goreng", "200 kkal", "80 gram"),
-    ("🍢 Tahu Bacem", "160 kkal", "80 gram"),
-    ("🍗 Ayam Rebus", "190 kkal", "100 gram"),
-    ("🐟 Ikan Bakar", "180 kkal", "100 gram"),
-    ("🥩 Daging Sapi Panggang", "250 kkal", "100 gram"),
-    ("🦐 Udang Saus Tiram", "170 kkal", "100 gram"),
-    ("🐟 Tuna Kukus", "160 kkal", "100 gram"),
-    ("🍗 Ayam Kukus", "175 kkal", "100 gram"),
-    ("🥚 Telur Rebus", "90 kkal", "50 gram"),
+    ("🍳 Telur Dadar", 180, "60 gram"),
+    ("🍽️ Tempe Goreng", 200, "80 gram"),
+    ("🍢 Tahu Bacem", 160, "80 gram"),
+    ("🍗 Ayam Rebus", 190, "100 gram"),
+    ("🐟 Ikan Bakar", 180, "100 gram"),
+    ("🥩 Daging Sapi Panggang", 250, "100 gram"),
+    ("🦐 Udang Saus Tiram", 170, "100 gram"),
+    ("🐟 Tuna Kukus", 160, "100 gram"),
+    ("🍗 Ayam Kukus", 175, "100 gram"),
+    ("🥚 Telur Rebus", 90, "50 gram"),
 ]
 
-
 sayur = [
-    ("🥬 Sayur Bayam", "40 kkal", "100 gram"),
-    ("🥦 Tumis Kangkung", "45 kkal", "100 gram"),
-    ("🥕 Capcay", "60 kkal", "120 gram"),
-    ("🍲 Sayur Asem", "50 kkal", "150 gram"),
-    ("🥣 Sup Wortel", "55 kkal", "120 gram"),
-    ("🥗 Gado-Gado", "120 kkal", "200 gram"),
-    ("🥒 Lalapan", "30 kkal", "50 gram"),
-    ("🍛 Sayur Lodeh", "70 kkal", "150 gram"),
-    ("🥦 Tumis Brokoli", "60 kkal", "100 gram"),
-    ("🥗 Urap Sayur", "50 kkal", "100 gram"),
+    ("🥬 Sayur Bayam", 40, "100 gram"),
+    ("🥦 Tumis Kangkung", 45, "100 gram"),
+    ("🥕 Capcay", 60, "120 gram"),
+    ("🍲 Sayur Asem", 50, "150 gram"),
+    ("🥣 Sup Wortel", 55, "120 gram"),
+    ("🥗 Gado-Gado", 120, "200 gram"),
+    ("🥒 Lalapan", 30, "50 gram"),
+    ("🍛 Sayur Lodeh", 70, "150 gram"),
+    ("🥦 Tumis Brokoli", 60, "100 gram"),
+    ("🥗 Urap Sayur", 50, "100 gram"),
 ]
 
 buah = [
-    ("🍌 Pisang", "90 kkal", "100 gram"),
-    ("🍎 Apel", "80 kkal", "125 gram"),
-    ("🍈 Pepaya", "70 kkal", "150 gram"),
-    ("🍊 Jeruk", "60 kkal", "130 gram"),
-    ("🍉 Semangka", "50 kkal", "200 gram"),
-    ("🍈 Melon", "55 kkal", "150 gram"),
-    ("🍍 Nanas", "60 kkal", "150 gram"),
-    ("🥭 Mangga", "90 kkal", "150 gram"),
-    ("🍇 Anggur", "70 kkal", "100 gram"),
-    ("🍎 Salak", "65 kkal", "100 gram"),
+    ("🍌 Pisang", 90, "100 gram"),
+    ("🍎 Apel", 80, "125 gram"),
+    ("🍈 Pepaya", 70, "150 gram"),
+    ("🍊 Jeruk", 60, "130 gram"),
+    ("🍉 Semangka", 50, "200 gram"),
+    ("🍈 Melon", 55, "150 gram"),
+    ("🍍 Nanas", 60, "150 gram"),
+    ("🥭 Mangga", 90, "150 gram"),
+    ("🍇 Anggur", 70, "100 gram"),
+    ("🍎 Salak", 65, "100 gram"),
 ]
-
 
 susu = [
-    ("🥛 Susu Sapi", "120 kkal", "200 gram"),
-    ("🌱 Susu Kedelai", "100 kkal", "200 gram"),
-    ("🍶 Yogurt", "110 kkal", "150 gram"),
-    ("🥛 Kefir", "100 kkal", "150 gram"),
-    ("🌰 Susu Almond", "80 kkal", "200 gram"),
-    ("🥤 Susu UHT", "130 kkal", "250 gram"),
-    ("🥛 Susu Skim", "90 kkal", "200 gram"),
-    ("🥄 Susu Bubuk", "150 kkal", "25 gram"),
-    ("🍫 Susu Coklat", "160 kkal", "250 gram"),
-    ("🥛 Susu Full Cream", "140 kkal", "200 gram"),
+    ("🥛 Susu Sapi", 120, "200 gram"),
+    ("🌱 Susu Kedelai", 100, "200 gram"),
+    ("🍶 Yogurt", 110, "150 gram"),
+    ("🥛 Kefir", 100, "150 gram"),
+    ("🌰 Susu Almond", 80, "200 gram"),
+    ("🥤 Susu UHT", 130, "250 gram"),
+    ("🥛 Susu Skim", 90, "200 gram"),
+    ("🥄 Susu Bubuk", 150, "25 gram"),
+    ("🍫 Susu Coklat", 160, "250 gram"),
+    ("🥛 Susu Full Cream", 140, "200 gram"),
 ]
-
 
 # Fungsi membuat rekomendasi menu lengkap
 def buat_menu_4_sehat_5_sempurna(jumlah=10):
     menu_list = []
     for _ in range(jumlah):
-        menu = f"{random.choice(karbo)} + {random.choice(lauk)} + {random.choice(sayur)} + {random.choice(buah)} + {random.choice(susu)}"
-        menu_list.append(menu)
+        k = random.choice(karbo)
+        l = random.choice(lauk)
+        s = random.choice(sayur)
+        b = random.choice(buah)
+        u = random.choice(susu)
+        total_kalori = k[1] + l[1] + s[1] + b[1] + u[1]
+        menu_str = (
+            f"{k[0]} ({k[2]}) + {l[0]} ({l[2]}) + {s[0]} ({s[2]}) + "
+            f"{b[0]} ({b[2]}) + {u[0]} ({u[2]})\n**Total Kalori: {total_kalori} kkal**"
+        )
+        menu_list.append(menu_str)
     return menu_list
 
 # Fungsi menghitung kalori
@@ -99,13 +104,14 @@ if menu == "🏠 Halaman Utama":
     st.markdown("""
 Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
-- 🔢 Menghitung kebutuhan kalori harian
-- 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna
+- 🔢 Menghitung kebutuhan kalori harian  
+- 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna  
 - 📚 Edukasi gizi seimbang
 
 ---
 
-
+Silakan gunakan menu di sebelah kiri untuk mulai 😊
+""")
 
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
@@ -120,7 +126,7 @@ elif menu == "🔢 Kalkulator Kalori":
 
     if st.button("Hitung Kalori"):
         kalori = hitung_kalori(bb, tb, usia, gender)
-        st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kalori.")
+        st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
         rekomendasi = buat_menu_4_sehat_5_sempurna(10)
         for i, menu in enumerate(rekomendasi, 1):
