@@ -4,6 +4,20 @@ import random
 # Atur halaman
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # DATA MENU
 karbo = [
     ("Nasi Putih", 175, "150 gram"), ("Nasi Merah", 150, "150 gram"),
