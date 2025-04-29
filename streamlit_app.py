@@ -230,7 +230,4 @@ Fitur utama yang tersedia dalam aplikasi ini meliputi:
 Kami berharap aplikasi ini bisa membantu kamu lebih bijak dalam memilih asupan makanan dan menjaga kesehatan tubuh secara menyenangkan. 💪😊
 """)
 
----
 
-✨ Terima kasih sudah menggunakan KaloriKu!
-""")
