@@ -196,7 +196,7 @@ elif menu == "🔢 Kalkulator Kalori":
     return bmr, kebutuhan_kalori
 
     if st.button("Hitung Kalori"):
-        kalori = hitung_kalori(bb, tb, usia, gender)
+        kalori = hitung_kalori(bb, tb, usia, gender,tingkat aktivitas)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
         rekomendasi = buat_menu_4_sehat_5_sempurna(10)
