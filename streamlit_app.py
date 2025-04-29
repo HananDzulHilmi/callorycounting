@@ -112,8 +112,9 @@ Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
 Silakan gunakan menu di sebelah kiri untuk mulai 😊
 """)
+    
 # Perkenalan Kelompok
-if selected == 'Perkenalan':
+if selected == '😎Perkenalan Kelompok':
     st.header('KELOMPOK 6 (E1-PMIP):')
     image_path = 'kerkom_7.jpg'  # Ganti dengan path yang sesuai ke file gambar Anda
     st.image(image_path, caption='dokumentasi kerkom 7')
