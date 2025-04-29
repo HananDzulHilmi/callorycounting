@@ -206,12 +206,14 @@ elif menu == "🔢 Kalkulator Kalori":
 
     if st.button("Hitung Kalori"):
         multiplier = aktivitas_dict[aktivitas]
-        kalori = hitung_kalori(bb, tb, usia, gender, multiplier)
+        kalori = hitung_kalori(nama,bb, tb, usia, gender, multiplier)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
         rekomendasi = buat_menu_4_sehat_5_sempurna(5)
         for i, menu in enumerate(rekomendasi, 1):
             st.markdown(f"{i}. {menu}")
+
+st.balloons() # Animasi balon setelah perhitungan dan saran ditampilkan
 
 # Tentang Aplikasi
 elif menu == "📖 Tentang":
