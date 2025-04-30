@@ -104,14 +104,6 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 """)
 
 # Halaman Perkenalan
-st.markdown("""
-    <div style="background-image: url('https://picsum.photos/800/200'); 
-                background-size: cover; padding: 50px; 
-                color: white; text-shadow: 1px 1px 2px black;">
-        <h1 style="text-align:center;">Selamat Datang di Aplikasi Kalori!</h1>
-    </div>
-""", unsafe_allow_html=True)
-
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
     st.write(""" 
@@ -124,6 +116,11 @@ Berikut anggota tim:
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)
 """)
+from PIL import Image
+
+# Tampilkan gambar kelompok
+gambar = Image.open("WhatsApp Image 2025-04-29 at 20.30.06_34f8f884.jpg")
+st.image(gambar, caption="Foto Kelompok 6 - PMIP", use_column_width=True)
 
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
