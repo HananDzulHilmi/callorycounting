@@ -104,6 +104,14 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 """)
 
 # Halaman Perkenalan
+st.markdown("""
+    <div style="background-image: url('https://picsum.photos/800/200'); 
+                background-size: cover; padding: 50px; 
+                color: white; text-shadow: 1px 1px 2px black;">
+        <h1 style="text-align:center;">Selamat Datang di Aplikasi Kalori!</h1>
+    </div>
+""", unsafe_allow_html=True)
+
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
     st.write(""" 
