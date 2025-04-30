@@ -116,10 +116,6 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 5. Clarisha Andini Putri (NIM: 2420582)
 """)
 
-    gambar = Image.open("WhatsApp Image 2025-04-29 at 20.30.06_34f8f884.jpg")
-    st.image(gambar, caption="Foto Kelompok 6 - PMIP", use_column_width=True)
-
-
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
     st.title("🔢 Kalkulator Kebutuhan Kalori Harian")
