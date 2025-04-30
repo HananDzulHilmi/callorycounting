@@ -106,8 +106,6 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
-     image_path = 'kerkom_7.jpg'  # Ganti dengan path yang sesuai ke file gambar Anda
-    st.image(image_path, caption='dokumentasi kerkom 7')
     st.write(""" 
     Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
     
