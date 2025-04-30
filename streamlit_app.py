@@ -77,7 +77,7 @@ menu = st.sidebar.selectbox("Navigasi", [
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
-st.markdown(
+    st.markdown(
     """
     <style>
     .stApp {
@@ -90,7 +90,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
     st.markdown("""
 Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
