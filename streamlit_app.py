@@ -106,6 +106,8 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
+     image_path = 'kerkom_7.jpg'  # Ganti dengan path yang sesuai ke file gambar Anda
+    st.image(image_path, caption='dokumentasi kerkom 7')
     st.write(""" 
     Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
     
@@ -116,10 +118,6 @@ Berikut anggota tim:
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)
 """)
-
-    from PIL import Image
-    gambar = Image.open("WhatsApp Image 2025-04-29 at 20.30.06_34f8f884.jpg")
-    st.image(gambar, caption="Foto Kelompok 6 - PMIP", use_column_width=True)
 
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
