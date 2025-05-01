@@ -80,8 +80,14 @@ if menu == "🏠 Halaman Utama":
     st.markdown(
     """
     <style>
+    body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
+        color: white !important;
+    }
+
+    <style>
     .stApp {
-        background-image: url("https://sehatindofarm.com/wp-content/uploads/2024/07/Kalkulator-Kalori-Makanan-1024x536.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        url("https://sehatindofarm.com/wp-content/uploads/2024/07/Kalkulator-Kalori-Makanan-1024x536.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
