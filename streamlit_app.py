@@ -81,7 +81,7 @@ if menu == "🏠 Halaman Utama":
     """
     <style>
     .stApp {
-        background-image: url("https://images.unsplash.com/photo-1606787366850-de6330128bfc");
+        background-image: url("https://sehatindofarm.com/wp-content/uploads/2024/07/Kalkulator-Kalori-Makanan-1024x536.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
