@@ -107,6 +107,14 @@ Silakan gunakan menu di sebelah kiri untuk mulai 😊
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
+    st.markdown( 
+    """
+    <style>
+    body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
+        color: white !important;
+    }""")
+    
+
     st.write(""" 
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
