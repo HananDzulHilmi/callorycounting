@@ -78,31 +78,35 @@ menu = st.sidebar.selectbox("Navigasi", [
 if menu == "🏠 Halaman Utama":
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
     st.markdown(
-    """
-    <style>
-    body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
-        color: white !important;
-    }
+        """
+        <style>
+        body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
+            color: white !important;
+        }
 
-    .stApp {
-        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                    url('https://img.freepik.com/free-photo/person-paying-using-nfc-technology_23-2149893740.jpg?t=st=1746145416~exp=1746149016~hmac=214734f56d9cfdbda8d298b4b5b1ddb4e8b54fd80f80f65a61bb02edc25c2b00&w=1380');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    
+        .stApp {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                        url('https://img.freepik.com/free-photo/person-paying-using-nfc-technology_23-2149893740.jpg?t=st=1746145416~exp=1746149016~hmac=214734f56d9cfdbda8d298b4b5b1ddb4e8b54fd80f80f65a61bb02edc25c2b00&w=1380');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.markdown("""
-Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
+    Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
-- 🔢 Menghitung kebutuhan kalori harian  
-- 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna  
-- 📚 Edukasi gizi seimbang
+    - 🔢 Menghitung kebutuhan kalori harian  
+    - 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna  
+    - 📚 Edukasi gizi seimbang
 
----
+    ---
 
-Silakan gunakan menu di sebelah kiri untuk mulai 😊
-""")
+    Silakan gunakan menu di sebelah kiri untuk mulai 😊
+    """)
 
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
