@@ -102,13 +102,14 @@ elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
 
     # Tampilkan foto kelompok
-    st.image("WhatsApp Image 2025-04-29 at 20.30.05_e11dffe5.jpg", 
-             caption="Foto Kelompok 6 - E1 PMIP", use_column_width=True)
+    st.image("kelompok6.jpg", 
+         caption="Foto Kelompok 6 - E1 PMIP", use_column_width=True)
 
-    # Styling warna teks (opsional, jika masih ingin mengatur warna teks)
-    st.markdown("""
+
+   # Styling warna teks hanya untuk halaman perkenalan
+st.markdown("""
     <style>
-    .stApp {
+    div.stMarkdown {
         color: white !important;
     }
     </style>
