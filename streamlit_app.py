@@ -4,34 +4,26 @@ import random
 # Atur halaman
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
 
-
-
 # DATA MENU
-karbo = [
-    ("Nasi Putih", 175, "150 gram"), ("Nasi Merah", 150, "150 gram"),
-    ("Kentang Rebus", 140, "200 gram"), ("Singkong Rebus", 120, "200 gram"),
-    ("Roti Gandum", 110, "2 lembar")
-]
-lauk = [
-    ("Ayam Panggang", 250, "100 gram"), ("Tahu Goreng", 120, "2 potong"),
-    ("Tempe Bacem", 160, "2 potong"), ("Ikan Bakar", 200, "100 gram"),
-    ("Telur Rebus", 90, "1 butir")
-]
-sayur = [
-    ("Sayur Bayam", 40, "1 mangkok"), ("Capcay", 80, "1 mangkok"),
-    ("Tumis Kangkung", 60, "1 piring"), ("Sayur Asem", 50, "1 mangkok"),
-    ("Sup Wortel", 55, "1 mangkok")
-]
-buah = [
-    ("Apel", 95, "1 buah"), ("Pisang", 105, "1 buah"),
-    ("Pepaya", 60, "100 gram"), ("Semangka", 50, "150 gram"),
-    ("Jeruk", 80, "1 buah")
-]
-susu = [
-    ("Susu Sapi", 150, "1 gelas"), ("Susu Kedelai", 100, "1 gelas"),
-    ("Yoghurt", 120, "1 cup"), ("Susu Almond", 90, "1 gelas"),
-    ("Susu Cokelat", 180, "1 gelas")
-]
+karbo = [("Nasi Putih", 175, "150 gram"), ("Nasi Merah", 150, "150 gram"),
+         ("Kentang Rebus", 140, "200 gram"), ("Singkong Rebus", 120, "200 gram"),
+         ("Roti Gandum", 110, "2 lembar")]
+
+lauk = [("Ayam Panggang", 250, "100 gram"), ("Tahu Goreng", 120, "2 potong"),
+        ("Tempe Bacem", 160, "2 potong"), ("Ikan Bakar", 200, "100 gram"),
+        ("Telur Rebus", 90, "1 butir")]
+
+sayur = [("Sayur Bayam", 40, "1 mangkok"), ("Capcay", 80, "1 mangkok"),
+         ("Tumis Kangkung", 60, "1 piring"), ("Sayur Asem", 50, "1 mangkok"),
+         ("Sup Wortel", 55, "1 mangkok")]
+
+buah = [("Apel", 95, "1 buah"), ("Pisang", 105, "1 buah"),
+        ("Pepaya", 60, "100 gram"), ("Semangka", 50, "150 gram"),
+        ("Jeruk", 80, "1 buah")]
+
+susu = [("Susu Sapi", 150, "1 gelas"), ("Susu Kedelai", 100, "1 gelas"),
+        ("Yoghurt", 120, "1 cup"), ("Susu Almond", 90, "1 gelas"),
+        ("Susu Cokelat", 180, "1 gelas")]
 
 # Fungsi membuat rekomendasi menu lengkap
 def buat_menu_4_sehat_5_sempurna(jumlah=10):
@@ -51,7 +43,7 @@ def buat_menu_4_sehat_5_sempurna(jumlah=10):
     return menu_list
 
 # Fungsi menghitung kalori
-def hitung_kalori(nama, berat, tinggi, usia, gender, multiplier):
+def hitung_kalori(berat, tinggi, usia, gender, multiplier):
     if gender.lower() == "laki-laki":
         bmr = 88.362 + (13.397 * berat) + (4.799 * tinggi) - (5.677 * usia)
     else:
@@ -61,8 +53,11 @@ def hitung_kalori(nama, berat, tinggi, usia, gender, multiplier):
 # Gaya CSS
 st.markdown("""
 <style>
-    .stApp {background-color: #bab86c; color: #333333; font-size: 18px;}
-    .css-1d391kg {color: #c99548;}
+    .stApp {
+        background-color: #bab86c; 
+        color: #333333; 
+        font-size: 18px;
+    }
     table {border: 2px solid #fb8e54;}
     th {background-color: #fb8e54; color: white;}
     td {background-color: #f3e9df; color: black;}
@@ -76,29 +71,20 @@ menu = st.sidebar.selectbox("Navigasi", [
 
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
+    st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://img.freepik.com/free-photo/person-paying-using-nfc-technology_23-2149893740.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
-    st.markdown(
-        """
-<style>
-body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
-    color: white !important;
-}
-</style>
-""", unsafe_allow_html=True
-
-
-        .stApp {
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                        url('https://img.freepik.com/free-photo/person-paying-using-nfc-technology_23-2149893740.jpg?t=st=1746145416~exp=1746149016~hmac=214734f56d9cfdbda8d298b4b5b1ddb4e8b54fd80f80f65a61bb02edc25c2b00&w=1380');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True 
-    )
-
     st.markdown("""
     Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
 
@@ -114,15 +100,15 @@ body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, te
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
-    st.markdown( 
-    """
+    st.markdown("""
     <style>
-    body, h1, h2, h3, h4, h5, h6, p, span, label, div, li, ul, ol, select, input, textarea, button {
+    .stApp {
         color: white !important;
-    }""")
-    
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-    st.write(""" 
+    st.markdown(""" 
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
 1. Hanan Dzul Hilmi (NIM: 2420601)  
@@ -131,7 +117,7 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)
 
-  Web ini dibuat dengan harapan dapat memberikan manfaat bagi pengguna dalam memahami dan mengelola kalori harian mereka, serta mendukung gaya hidup sehat. Kami mengucapkan terima kasih atas dukungan yang diberikan!
+Web ini dibuat dengan harapan dapat memberikan manfaat bagi pengguna dalam memahami dan mengelola kalori harian mereka, serta mendukung gaya hidup sehat. Kami mengucapkan terima kasih atas dukungan yang diberikan!
 """)
 
 # Halaman Kalkulator Kalori
@@ -166,7 +152,7 @@ elif menu == "🔢 Kalkulator Kalori":
 
     if st.button("Hitung Kalori"):
         multiplier = aktivitas_dict[aktivitas]
-        kalori = hitung_kalori(nama, bb, tb, usia, gender, multiplier)
+        kalori = hitung_kalori(bb, tb, usia, gender, multiplier)
         st.success(f"{nama}, kebutuhan kalori harianmu sekitar {kalori} kkal.")
         st.markdown("### Rekomendasi Menu 4 Sehat 5 Sempurna:")
         rekomendasi = buat_menu_4_sehat_5_sempurna(10)
