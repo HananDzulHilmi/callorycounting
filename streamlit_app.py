@@ -100,22 +100,6 @@ if menu == "🏠 Halaman Utama":
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
-
-    # Tampilkan foto kelompok
-    st.image("kelompok6.jpg", 
-         caption="Foto Kelompok 6 - E1 PMIP", use_column_width=True)
-
-
-   # Styling warna teks hanya untuk halaman perkenalan
-st.markdown("""
-    <style>
-    div.stMarkdown {
-        color: white !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    # Deskripsi kelompok
     st.markdown(""" 
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
