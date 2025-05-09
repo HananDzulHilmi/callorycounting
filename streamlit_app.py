@@ -100,6 +100,12 @@ if menu == "🏠 Halaman Utama":
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
+
+    # Tampilkan foto kelompok
+    st.image("WhatsApp Image 2025-04-29 at 20.30.05_e11dffe5.jpg", 
+             caption="Foto Kelompok 6 - E1 PMIP", use_column_width=True)
+
+    # Styling warna teks (opsional, jika masih ingin mengatur warna teks)
     st.markdown("""
     <style>
     .stApp {
@@ -108,6 +114,7 @@ elif menu == "😎 Perkenalan Kelompok":
     </style>
     """, unsafe_allow_html=True)
 
+    # Deskripsi kelompok
     st.markdown(""" 
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
@@ -116,9 +123,8 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 3. Subhan Zikry (NIM: 2420667)  
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)
-
-
 """)
+
 
 # Halaman Kalkulator Kalori
 elif menu == "🔢 Kalkulator Kalori":
