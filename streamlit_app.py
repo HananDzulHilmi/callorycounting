@@ -117,7 +117,7 @@ Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan
 4. Nabila Putri Ramadhani (NIM: 2420630)  
 5. Clarisha Andini Putri (NIM: 2420582)
 
-Web ini dibuat dengan harapan dapat memberikan manfaat bagi pengguna dalam memahami dan mengelola kalori harian mereka, serta mendukung gaya hidup sehat. Kami mengucapkan terima kasih atas dukungan yang diberikan!
+
 """)
 
 # Halaman Kalkulator Kalori
