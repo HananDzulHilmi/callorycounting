@@ -102,7 +102,7 @@ if menu == "🏠 Halaman Utama":
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
     if os.path.exists("kelompok 6.jpg"):
-        image = Image.open("kelompok 6.jpg")
+        image = Image.open("file:///D:/Hanan/kelompok%206.jpg")
         st.image(image, caption="Kelompok 6 👥", use_column_width=True)
     else:
         st.warning("Gambar 'kelompok 6.jpg' tidak ditemukan.")
