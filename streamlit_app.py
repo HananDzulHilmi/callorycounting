@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+from PIL import Image
 
 # Atur halaman
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
