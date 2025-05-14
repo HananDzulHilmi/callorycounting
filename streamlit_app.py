@@ -86,7 +86,7 @@ if menu == "🏠 Halaman Utama":
 
     st.title("🍱 Calorie Counting - Aplikasi Gizi Sehatmu")
     st.markdown("""
-    Selamat datang di **Calorie Counting**, aplikasi sederhana untuk membantu kamu:
+    Selamat datang di **Calorie Counting**, Tujuan aplikasi sederhana untuk membantu kamu:
 
     - 🔢 Menghitung kebutuhan kalori harian  
     - 🍽️ Mendapatkan rekomendasi menu 4 Sehat 5 Sempurna  
