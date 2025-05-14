@@ -149,7 +149,7 @@ elif menu == "🔢 Kalkulator Kalori":
         rekomendasi = buat_menu_4_sehat_5_sempurna(10)
         for i, menu_item in enumerate(rekomendasi, 1):
             st.markdown(f"{i}. {menu_item}")
-        st.emoticon love()
+        st.balloons()
 
 # Halaman Tentang
 elif menu == "📖 Tentang":
