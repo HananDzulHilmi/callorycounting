@@ -1,6 +1,5 @@
 import streamlit as st
 import random
-import os
 
 # Atur halaman
 st.set_page_config(page_title="Calorie Counting", page_icon="🍱", layout="centered")
@@ -101,11 +100,8 @@ if menu == "🏠 Halaman Utama":
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
-    if os.path.exists("kelompok 6.jpg"):
-        image = Image.open("file:///D:/Hanan/kelompok%206.jpg")
-        st.image(image, caption="Kelompok 6 👥", use_column_width=True)
-    else:
-        st.warning("Gambar 'kelompok 6.jpg' tidak ditemukan.")
+        image_path = 'kelompok_6.jpg'  # Ganti dengan path yang sesuai ke file gambar Anda
+    st.image(image_path, caption='dokumentasi kerkom 6')
     st.markdown(""" 
 Kelompok 6 merupakan tim mahasiswa Program Studi Penjaminan Mutu Industri Pangan yang berkolaborasi dalam pengembangan aplikasi ini. Berikut adalah anggota tim beserta NIM masing-masing:
 
