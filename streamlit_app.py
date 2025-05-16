@@ -71,7 +71,7 @@ menu = st.sidebar.selectbox("Navigasi", [
 
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
-    st.warning('Warning message')
+    st.warning('silahkan tekan tombol panah di pojok kiri atas untuk melihat fitur')
     st.markdown("""
     <style>
     .stApp {
