@@ -96,7 +96,7 @@ if menu == "🏠 Halaman Utama":
 
     Silakan gunakan menu di sebelah kiri untuk mulai 😊
     """)
-st.info('Info message')  
+         st.info('Info message')  
 
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
