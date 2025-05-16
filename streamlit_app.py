@@ -96,7 +96,7 @@ if menu == "🏠 Halaman Utama":
 
     Silakan gunakan menu di sebelah kiri untuk mulai 😊
     """)
-
+    st.toast('Mr Stay-Puft'
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
