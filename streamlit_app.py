@@ -96,7 +96,7 @@ if menu == "🏠 Halaman Utama":
 
     Silakan gunakan menu di sebelah kiri untuk mulai 😊
     """)
-    st.error('Error message')
+    st.warning('Warning message')
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
