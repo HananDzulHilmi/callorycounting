@@ -96,6 +96,7 @@ if menu == "🏠 Halaman Utama":
 
     Silakan gunakan menu di sebelah kiri untuk mulai 😊
     """)
+   st.info("Silahkan tekan tombol panah (>) yang berada di kiri atas untuk melihat fitur") 
 
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
