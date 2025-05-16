@@ -71,6 +71,7 @@ menu = st.sidebar.selectbox("Navigasi", [
 
 # Halaman Utama
 if menu == "🏠 Halaman Utama":
+    st.warning('Warning message')
     st.markdown("""
     <style>
     .stApp {
@@ -96,7 +97,6 @@ if menu == "🏠 Halaman Utama":
 
     Silakan gunakan menu di sebelah kiri untuk mulai 😊
     """)
-    st.warning('Warning message')
 # Halaman Perkenalan
 elif menu == "😎 Perkenalan Kelompok":
     st.header("KELOMPOK 6 (E1-PMIP)")
